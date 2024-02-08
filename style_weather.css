@@ -1,15 +1,17 @@
 {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
     background: #222;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .card {
+    font-family: 'Montserrat', sans-serif;
     width: 90%;
     max-width: 470px;
     background: linear-gradient(135deg, #d1d32f, #8cb825);
@@ -53,3 +55,23 @@ body {
 .search button img {
     width: 16px;
 }
+
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+.weather h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.weather {
+    display: none;
+}
+
