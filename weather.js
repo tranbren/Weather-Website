@@ -12,7 +12,7 @@ async function checkWeather(city) {
     console.log(data);
 
     if (data.cod && data.cod !== 200) {
-        alert("City not found. please enter a valid city name.");
+        alert("City not found. Please Enter a Valid City Name.");
         return;
     }
 
