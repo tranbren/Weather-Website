@@ -22,102 +22,26 @@
         <img src="images/rain.png" class="weather-icon">
         <h1 class="temp"> </h1>
         <h2 class="city"></h2>
+        <div class="details">
+            <div class="col">
+                <img src="images/humidity.png">
+                <div>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/wind.png">
+                <div>
+                    <p class="wind">15 km/h</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 </div>
-<div class="card2">
-    <div class="tip">
-        <button id="tipButton"><img src="images/search.png"></button>
-    </div>
-</div>
-<script>
-    const apiKey = "af68708a159a8a2a3210c8030b11de3b";
-    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=imperial&q=";
 
-    const searchBox = document.querySelector(".search input");
-    const searchBtn = document.getElementById("searchButton");
-    const weatherIcon = document.querySelector(".weather-icon");
-    const card2 = document.querySelector(".card2");
-    const tipBtn = document.getElementById("tipButton");
-
-    async function checkWeather(city) {
-        const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-        const data = await response.json();
-
-        console.log(data);
-
-        document.querySelector(".city").innerHTML = data.name;
-        document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°F";
-
-        if (data.weather[0].main == "Clouds") {
-            weatherIcon.src = "images/clouds.png";
-            document.querySelector(".card").style.background = "linear-gradient(135deg, #989894, #444740)";
-        } else if (data.weather[0].main == "Clear") {
-            weatherIcon.src = "images/clear.png";
-            document.querySelector(".card").style.background = "linear-gradient(135deg, #cfd249, #949529)";
-        } else if (data.weather[0].main == "Rain") {
-            weatherIcon.src = "images/rain.png";
-            document.querySelector(".card").style.background = "linear-gradient(135deg, #392eb1, #1e3fd3)";
-        } else if (data.weather[0].main == "Drizzle") {
-            weatherIcon.src = "images/drizzle.png";
-            document.querySelector(".card").style.background = "llinear-gradient(135deg, #39ded8, #2484ae)";
-        } else if (data.weather[0].main == "Mist") {
-            weatherIcon.src = "images/mist.png";
-            document.querySelector(".card").style.background = "linear-gradient(135deg, #5dcbb3, #f0f1ed)";
-        } else if (data.weather[0].main == "Snow") {
-            weatherIcon.src = "images/snow.png";
-            document.querySelector(".card").style.background = "linear-gradient(135deg, #b8dee2, #7ccbdf)";
-        }
-
-        document.querySelector(".weather").style.display = "block";
-        card2.style.display = "block";
-    }
-
-    searchBtn.addEventListener("click", () => {
-        checkWeather(searchBox.value);
-    });
-
-    function updateDateTime() {
-        const currentDateElement = document.getElementById("current-date");
-        const currentTimeElement = document.getElementById("current-time");
-
-        const currentDate = new Date();
-        const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
-        currentDateElement.textContent = currentDate.toLocaleDateString(undefined, options);
-
-        const currentTime = currentDate.toLocaleTimeString();
-        currentTimeElement.textContent = currentTime;
-    }
-
-    updateDateTime();
-    setInterval(updateDateTime, 1000);
-
-    function showTipGrid() {
-        const tipContainer = document.createElement('div');
-        tipContainer.classList.add('tip-container');
-
-        // Create and append the text element
-        const tipText = document.createElement('div');
-        tipText.textContent = 'Please Enter a Tip Percentage';
-        tipText.classList.add('tip-text');
-        tipContainer.appendChild(tipText);
-
-        const tipGrid = document.createElement('div');
-        tipGrid.classList.add('tip-grid');
-
-        for (let i = 0; i < 9; i++) {
-            const tipSquare = document.createElement('div');
-            tipSquare.classList.add('tip-square');
-            tipSquare.textContent = (i + 1) * 5 + '%'; // Example percentage values
-            tipGrid.appendChild(tipSquare);
-        }
-
-        tipContainer.appendChild(tipGrid);
-
-        card2.appendChild(tipContainer);
-    }
-
-    tipBtn.addEventListener("click", showTipGrid);
-
-</script>
+<script src="weather.js"></script>
 </body>
 </html>

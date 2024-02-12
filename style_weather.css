@@ -57,22 +57,48 @@ body {
 }
 
 .weather-icon{
-    width: 220px;
+    width: 200px;
     margin-top: 0px;
 }
 
 .weather h1 {
-    font-size: 70px;
+    font-size: 50px;
     margin: 0;
 }
 
 .weather h2 {
-    font-size: 40px;
+    font-size: 45px;
     margin: 0;
 }
 
 .weather {
     display: none;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.col img {
+    width: 90px;
+}
+
+.col p {
+    font-size: 25px;
+}
+
+.col .humidity{
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.col .wind{
+    font-size: 20px;
+    margin-bottom: 0px;
 }
 
 .date-time {
@@ -83,61 +109,3 @@ body {
     font-size: 50px;
 }
 
-/* Tip Card */
-
-.card2 {
-    font-family: 'Montserrat', sans-serif;
-    width: 90%;
-    max-width: 470px;
-    background: linear-gradient(135deg, #000000, #494a44);
-    color: #fff;
-    margin: 100px auto 0;
-    border-radius: 20px;
-    padding: 30px 35px;
-    text-align: center;
-    display: none;
-} 
-
-.tip button {
-    border: 0;
-    outline: 0;
-    background: #ebfffc;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-}
-
-.tip button img {
-    width: 16px;
-}
-
-.tip-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    margin-top: 20px;
-}
-
-.tip-square {
-    background-color: #ebfffc;
-    color: #555;
-    border-radius: 10px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.tip-container {
-    text-align: center;
-}
-
-.tip-text {
-    margin-top: 10px;
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #fff; /* Adjust the color as needed */
-}
