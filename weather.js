@@ -35,7 +35,7 @@ async function checkWeather(city) {
         document.querySelector(".card").style.background = "llinear-gradient(135deg, #39ded8, #2484ae)";
     } else if (data.weather[0].main == "Mist") {
         weatherIcon.src = "images/mist.png";
-        document.querySelector(".card").style.background = "linear-gradient(135deg, #5dcbb3, #f0f1ed)";
+        document.querySelector(".card").style.background = "linear-gradient(135deg, #5dcbb3, #2b6269)";
     } else if (data.weather[0].main == "Snow") {
         weatherIcon.src = "images/snow.png";
         document.querySelector(".card").style.background = "linear-gradient(135deg, #b8dee2, #7ccbdf)";
