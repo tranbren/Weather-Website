@@ -1,16 +1,18 @@
-*{
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f0f0f0;
     color: #ececec;
 }
 
-
+/* Card Styles */
 .card {
     max-width: 400px;
     margin: 100px auto;
@@ -20,9 +22,10 @@ body {
     padding: 40px;
     text-align: center;
     flex: 1;
+    animation: colorChange 5s infinite; /* Apply color change animation */
 }
 
-
+/* Search Styles */
 .search {
     display: flex;
     align-items: center;
@@ -54,12 +57,14 @@ body {
     width: 14px;
 }
 
+/* Weather Styles */
 .weather {
     display: none;
 }
 
 .weather-icon {
     width: 160px;
+    animation: pulse 1s infinite; /* Apply pulse animation */
 }
 
 .temp {
@@ -97,10 +102,12 @@ body {
     color: #ececec; 
     margin: 0; 
 }
+
 .col .humidity {
     margin-top: 9px;
 }
 
+/* Responsive Styles */
 @media (max-width: 600px) {
     .details {
         flex-direction: column;
@@ -111,7 +118,25 @@ body {
         margin-bottom: 20px;
     }
 }
+
+/* Date and Time Styles */
 .date-time {
     font-size: 15px;
 }
 
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.weather-icon {
+    animation: pulse 2s infinite; /* Change animation duration to 2s */
+}
