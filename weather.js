@@ -24,9 +24,15 @@ async function checkWeather(city) {
     if (data.weather[0].main == "Clouds") {
         weatherIcon.src = "images/clouds.png";
         document.querySelector(".card").style.background = "linear-gradient(135deg, #989894, #444740)";
+        document.body.style.backgroundImage = "url('images/cloud.gif')";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
     } else if (data.weather[0].main == "Clear") {
         weatherIcon.src = "images/clear.png";
         document.querySelector(".card").style.background = "linear-gradient(135deg, #cfd249, #949529)";
+        document.body.style.backgroundImage = "url('images/clear.gif')";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
     } else if (data.weather[0].main == "Rain") {
         weatherIcon.src = "images/rain.png";
         document.querySelector(".card").style.background = "linear-gradient(135deg, #392eb1, #1e3fd3)";
