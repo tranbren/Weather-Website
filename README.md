@@ -26,6 +26,14 @@ Welcome to the Weather Information Website! This tool allows users to input a ci
 2. **Fetch Data**: Press the Search Button to send a request to the OpenWeather API.
 3. **Display Results**: The website retrieves and displays the temperature, wind speed, and humidity for the specified city.
 
+### Home Screen
+
+![Home Screen](https://github.com/tranbren/Weather-Website/blob/main/Weather-website-loadin.png)
+
+### Search Results
+
+![Search Results](https://github.com/tranbren/Weather-Website/blob/main/Weather-website-city.png)
+
 ## Credits
 
 - **OpenWeather API**: For providing the weather data used on this website.
